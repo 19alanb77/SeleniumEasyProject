@@ -191,7 +191,80 @@ public class PageAPI {
 			.pickFromSearchBox(searchBox)
 			.pickFromMultipleSelect(select)
 			.pickFromDisabledValues(disabled)
-			.pickFromCategoryRelatedOptions(category);
-		
+			.pickFromCategoryRelatedOptions(category);	
+	}
+
+	/**
+	 * Do an exercises from Bootsrap Date Picker Demo.
+	 * 
+	 */
+	public void bootstrapDateDemo() {
+		new DatePickersPage(driver)
+			.bootstrapDateExample()
+			.bootstrapDateRangeExample();
+	}
+
+	/**
+	 * Do an exercises from JQuery Date Picker Demo.
+	 * 
+	 * @param month
+	 * 			Value to pick from Months list
+	 */
+	public void jqueryDateDemo(String month) {
+		new DatePickersPage(driver)
+			.jqueryDateRangePicker(month);
+	}
+
+	/**
+	 * Do an exercises from Table Pagination Demo.
+	 * 
+	 */
+	public void tablePagination() {
+		new TablePage(driver)
+			.tablePagination();
+	}
+
+	/**
+	 * Do an exercises from Table Data Search Demo.
+	 * 
+	 * @param task
+	 * 			value to search from table
+	 * @param username
+	 * 			first record to search by username
+	 * @param recordNo
+	 * 			second record to search by number of record
+	 * 
+	 */
+	public void tableDataSearch(String task,String username,String recordNo) {
+		new TablePage(driver)
+			.tableSearchTasks(task)
+			.tableSearchListedUsers(username,recordNo);
+	}
+
+	/**
+	 * Do an exercises from Table Filter Demo.
+	 * 
+	 */
+	public void tableFilter() {
+		new TablePage(driver)
+			.tableFilter();
+	}
+
+	/**
+	 * Do an exercises from Table Sort & Search Demo.
+	 * 
+	 * @param numberOfRecords
+	 * 			number of record to show
+	 * @param columnName
+	 * 			name of the column to sort
+	 * @param value
+	 * 			value to search in table
+	 * 
+	 */
+	public void sortTable(String numberOfRecords,String columnName,String value) {
+		new TablePage(driver)
+			.showNumberOfRecords(numberOfRecords)
+			.sortByColumn(columnName)
+			.searchRecords(value);
 	}
 }
