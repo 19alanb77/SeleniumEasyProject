@@ -321,7 +321,7 @@ public class InputFormsPage extends Page {
 		commentAjaxField.sendKeys(comment);
 		submitButton.click();
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Form submited Successfully!" + "']")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Form submited Successfully!']")));
 		return new InputFormsPage(driver);
 	}
 

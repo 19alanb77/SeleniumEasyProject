@@ -267,4 +267,93 @@ public class PageAPI {
 			.sortByColumn(columnName)
 			.searchRecords(value);
 	}
+
+	/**
+	 * Do an exercises from JQuery Download Progress bars Demo.
+	 * 
+	 */
+	public void jqueryDownload() {
+		new ProgressBarsPage(driver)
+			.jqueryDownload();
+	}
+	
+	/**
+	 * Do an exercises from Bootstrap Progress bar Demo.
+	 * 
+	 */
+	public void bootstrapDownload() {
+		new ProgressBarsPage(driver)
+			.bootstrapDownload();
+	}
+
+	/**
+	 * Do an exercises from Drag & Drop Sliders Demo.
+	 * 
+	 */
+	public void dragDropSliders() {
+		new ProgressBarsPage(driver)
+			.dragDropSliders();
+	}
+
+
+	/**
+	 * Do an exercises from Bootstrap Alerts Demo.
+	 * 
+	 */
+	public void bootstrapAlerts() {
+		new AlertModalsPage(driver)
+			.checkBootstrapAlerts();
+	}
+
+	/**
+	 * Do an exercises from Bootstrap Modals Demo.
+	 * 
+	 */
+	public void bootstrapModals() {
+		new AlertModalsPage(driver)
+			.checkBootstrapModals();	
+	}
+
+	/**
+	 * Do an exercises from Window Popup Modal Demo.
+	 * 
+	 */
+	public void windowPopup() {
+		new AlertModalsPage(driver)
+			.closeWindowPopup();
+	}
+
+	/**
+	 * Do an exercises from Progress Bar Modal Demo.
+	 * 
+	 */
+	public void progressBarModal() {
+		new AlertModalsPage(driver)
+			.showProgressBar();
+	}
+
+	/**
+	 * Do an exercises from Javascript Alerts Demo.
+	 * 
+	 * @param message
+	 * 			message to insert into alert
+	 */
+	public void javascriptAlerts(String message) {
+		new AlertModalsPage(driver)
+			.alertBox()
+			.confirmBox()
+			.alertSearchBox(message);
+	}
+
+	/**
+	 * Do an exercises from File Download Demo.
+	 * 
+	 * @param text
+	 * 			text to add to the file
+	 * @throws InterruptedException 
+	 */
+	public void fileDownload(String text) {
+		new AlertModalsPage(driver)
+			.generateFile(text);
+	}
 }
