@@ -192,7 +192,7 @@ public class AlertModalsPage extends Page {
 	 * Click alert box and insert message.
 	 * 
 	 * @param message
-	 * 			message to insert into alert
+	 * 		message to insert into alert
 	 * 
 	 * @return instance of AlertModalsPage object.
 	 */
@@ -207,7 +207,7 @@ public class AlertModalsPage extends Page {
 	 * Generate file with specific text.
 	 * 
 	 * @param text
-	 * 			text to add to the file
+	 * 		text to add to the file
 	 * 
 	 * @return instance of AlertModalsPage object.
 	 * @throws InterruptedException 
