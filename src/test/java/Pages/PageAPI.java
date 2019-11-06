@@ -350,10 +350,62 @@ public class PageAPI {
 	 * 
 	 * @param text
 	 * 			text to add to the file
-	 * @throws InterruptedException 
 	 */
 	public void fileDownload(String text) {
 		new AlertModalsPage(driver)
 			.generateFile(text);
+	}
+
+	/**
+	 * Do an exercises from Bootstrap List Box Demo.
+	 * 
+	 * @param leftValue
+	 * 			value to move from left column
+	 * @param rightValue
+	 * 			value to move from right column
+	 */
+	public void bootstrapListBox(String leftValue,String rightValue) {
+		new ListBoxPage(driver)
+			.bootstrapList(leftValue,rightValue);
+	}
+
+	/**
+	 * Do an exercises from JQuery List Box Demo.
+	 * 
+	 * @param args
+	 * 			values to move to another column
+	 */
+	public void jqueryListBox(String ...args) {
+		new ListBoxPage(driver)
+			.jqueryList(args);
+	}
+
+	/**
+	 * Do an exercises from Data List Filter Demo.
+	 * 
+	 * @param name
+	 * 			name of the user to find
+	 */
+	public void listFilter(String name) {
+		new ListBoxPage(driver)
+			.dataListFilter(name);
+	}
+
+	/**
+	 * Do an exercises from Drag and Drop Demo.
+	 *
+	 */
+	public void dragAndDrop() {
+		new OthersPage(driver)
+			.dragAndDropItems();
+	}
+
+	/**
+	 * Do an exercises from Dynamic Data Loading Demo.
+	 * 
+	 */
+	public void dynamicData() {
+		new OthersPage(driver)
+			.loadDynamicData();
 	}
 }
