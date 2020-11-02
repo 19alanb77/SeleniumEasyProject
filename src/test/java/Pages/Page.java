@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
  * 
  * @author Alan Buda
  */
-public class Page {
+public abstract class Page {
 	
 	protected WebDriver driver;
 
