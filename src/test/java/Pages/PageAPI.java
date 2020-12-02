@@ -58,9 +58,8 @@ public class PageAPI {
 		WebElement categoryElement = driver.findElement(By.xpath("//a[text()='" + category + "']"));
 		WebElement demoElement = driver.findElement(By.xpath("(//a[text()='" + demo + "'])[2]"));
 		WebDriverWait wait = new WebDriverWait(driver,5);
-		categoryElement.click();
-		wait.until(ExpectedConditions.elementToBeClickable(demoElement));
-		demoElement.click();	
+		wait.until(ExpectedConditions.elementToBeClickable(categoryElement)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(demoElement)).click();;
 	}
 
 	/**
