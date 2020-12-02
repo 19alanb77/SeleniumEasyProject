@@ -1,34 +1,15 @@
 package Tests;
 
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import Pages.PageAPI;
 
 /**
  * Test class for Alert & Modals scenario.
  * 
  * @author Alan Buda
  */
-public class AlertModalsTest {
-
-	public PageAPI pageAPI = new PageAPI();
+public class AlertModalsTest extends BaseTest {
 	
-	@BeforeClass(description = "Initialize driver with specified properties")
-	public void init() throws IOException {
-		pageAPI.setDriver(30, TimeUnit.SECONDS);
-	}
-	
-	@Test(description = "Open main page of Selenium East")				
-	public void openMainPage() {
-		pageAPI.openMainPage();		
-	}
-	
-	@Test(description = "Do an exercises from Bootstrap Alerts Demo", dependsOnMethods = "openMainPage")				
+	@Test(description = "Do an exercises from Bootstrap Alerts Demo")				
 	public void bootstrapAlert() {	
 		pageAPI.pickDemo("Alerts & Modals", "Bootstrap Alerts");
 		pageAPI.bootstrapAlerts();
@@ -62,11 +43,6 @@ public class AlertModalsTest {
 	public void fileDownload() {	
 		pageAPI.pickDemo("Alerts & Modals", "File Download");
 		pageAPI.fileDownload("Example text Alan Buda");
-	}
-
-	@AfterClass(description = "Close all browser windows and safely end the session")
-	public void afterTest() {
-		pageAPI.closeDriver();		
-	}		
+	}	
 
 }
